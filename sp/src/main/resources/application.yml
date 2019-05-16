@@ -1,0 +1,23 @@
+
+server:
+  port: 8082
+
+spring:
+  datasource:
+    name: test
+    url: jdbc:mysql://localhost:3306/sbdb
+    username: root
+    password: 123456
+    #希望配置freemarker的使用，加载模块
+  mvc:
+    view:
+      prefix: /templates/
+      suffix: .ftl
+  devtools:
+    restart:
+      enable: true
+
+
+
+mybatis-plus:
+  mapper-locations: classpath:/mapper/**/*.xml
